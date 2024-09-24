@@ -1,0 +1,31 @@
+body {
+    max-height: screen;
+    max-width: screen;
+    background-color: aliceblue;
+}
+
+input {
+    min-width: 5rem;
+    min-height: 2rem;
+}
+
+table {
+    border: 1px solid black;
+}
+
+table > tr > td {
+    border: 1px bold black;
+}
+
+#counter {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+}
+input {
+    margin: 2px;
+    
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+}

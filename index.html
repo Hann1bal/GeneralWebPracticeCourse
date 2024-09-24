@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My page</title>
+    <link rel="stylesheet" href="index.css">
+    <script>
+        // let var const
+        //primitive
+        async function JSonApi() {
+            return fetch("https://jsonplaceholder.typicode.com/comments").then(response => response.json());
+        }
+
+        const listComment = JSonApi().then(data => document.getElementById("changed_value").innerHTML =
+            data.map(
+                comment => `<div>
+                <div> user: ${comment['email']} </div>
+                <div> Says: ${data.body} </div>
+            </div>`
+            ));
+        window.onload = listComment;
+
+        //complex
+        let list = [1, 2, 3, 4, 5, 6]
+        let obj = {
+            name: "vasta",
+            age: 19,
+            work: () => { console.log("do smth") }
+        }
+        let count = 5;
+        const counterHandler = () => {
+
+        }
+        // function onchangeHandler(value) {
+        //     document.getElementById("cstBtn").hidden = value == '5';
+        //     document.getElementById("changed_value").innerHTML = value;
+        // }
+    </script>
+</head>
+
+<body>
+    <button id="cstBtn">Click me</button>
+    <!-- <input id="1"  onchange="onchangeHandler(this.value)" type="number" placeholder="click me again" /> -->
+    <div class="counter" id="counter" onblur="">
+        <div id="changed_value">
+        </div>
+    </div>
+    <table>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+    <!-- <a class="btn" href="#"> 
+           <img src="https://imagekit.io/blog/content/images/2020/06/cdn-blog-banner.jpg"/>
+        </a> -->
+    <!-- <label for="btn">asdasd</label> -->
+    <h1 id="header">Hello</h1>
+</body>
+
+</html>
